@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+data/chroma_db/
+output/
+*.pdf
+{agents,mcp_servers,data,output}
+.ipynb_checkpoints
+scraper_agent - Copy.py
+venv
+Untitled.ipynb

@@ -1,0 +1,39 @@
+JOHN CHAN
+AI Engineer | Hong Kong
+john.chan@email.com | github.com/johnchan | linkedin.com/in/johnchan
+
+SUMMARY
+AI engineer with 3 years of experience building machine learning systems and Python applications.
+Passionate about LLMs and agentic AI. Looking for AI engineer roles in Hong Kong.
+
+SKILLS
+- Languages: Python, SQL, JavaScript
+- ML/AI: PyTorch, Scikit-learn, Hugging Face Transformers, LangChain, RAG pipelines
+- Databases: PostgreSQL, ChromaDB, Redis
+- Tools: Docker, Git, FastAPI, Pandas, NumPy
+- Cloud: AWS (basic), GCP (basic)
+
+EXPERIENCE
+
+AI Engineer Intern — Tech Startup (Remote)
+Jun 2023 – Dec 2023
+- Built a RAG pipeline using LangChain and ChromaDB to answer questions over 10,000 company documents
+- Integrated OpenAI GPT-4 API for document summarisation, reducing review time by 60%
+- Deployed FastAPI backend on Docker, serving 500+ daily requests
+
+ML Engineer — Freelance
+Jan 2022 – May 2023
+- Trained text classification models with Hugging Face Transformers (BERT fine-tuning)
+- Built data pipelines with Pandas and SQL for structured data preprocessing
+- Delivered 5 client projects in NLP and demand forecasting
+
+EDUCATION
+BSc Computer Science — City University of Hong Kong, 2022
+Final Year Project: Sentiment analysis for Cantonese social media using BERT
+
+PROJECTS
+- Resume-Job Gap Analyser: Multi-agent system using LangGraph + Ollama + MCP for automated job market analysis
+- Document QA Bot: RAG chatbot over PDF documents using LangChain + ChromaDB
+
+LANGUAGES
+English (fluent), Cantonese (native), Mandarin (conversational)
