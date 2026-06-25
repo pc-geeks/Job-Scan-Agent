@@ -1,4 +1,4 @@
-# JobScan Agent
+# Job Scan Agent
 
 **Multi-agent AI system for job gap analysis**  
 Built with LangGraph + Ollama (local LLM) + ChromaDB + MCP
@@ -76,7 +76,7 @@ ollama pull qwen2.5:14b       # 9 GB, needs 16 GB RAM
 ### 2\. Install Python dependencies
 
 ```bash
-cd job\_scan\_agent
+cd job\\\_scan\\\_agent
 pip install -r requirements.txt
 ```
 
@@ -87,7 +87,7 @@ pip install -r requirements.txt
 python main.py
 
 # With your own resume (txt or pdf)
-python main.py --resume path/to/your\_cv.pdf
+python main.py --resume path/to/your\\\_cv.pdf
 
 # Use a different Ollama model
 python main.py --resume cv.pdf --model qwen2.5:14b
@@ -115,7 +115,7 @@ Job Match Results
 │  ... │ ...                 │ ...            │ ...              │  ...  │ ...              │
 └──────┴─────────────────────┴────────────────┴──────────────────┴───────┴──────────────────┘
 
-Report saved: output/jobscan\_report\_20260624\_195457.md
+Report saved: output/jobscan\\\_report\\\_20260624\\\_195457.md
 ```
 
 \---
@@ -125,10 +125,10 @@ Report saved: output/jobscan\_report\_20260624\_195457.md
 The project includes an MCP-compliant Filesystem server that can be used independently:
 
 ```bash
-python mcp\_servers/filesystem\_server.py
+python mcp\\\_servers/filesystem\\\_server.py
 ```
 
-This exposes `read\_file`, `write\_file`, and `list\_files` as MCP tools — compatible with any MCP client (Claude Desktop, custom agent, etc.).
+This exposes `read\\\_file`, `write\\\_file`, and `list\\\_files` as MCP tools — compatible with any MCP client (Claude Desktop, custom agent, etc.).
 
 \---
 
@@ -137,7 +137,7 @@ This exposes `read\_file`, `write\_file`, and `list\_files` as MCP tools — com
 * Designed a 3-node LangGraph `StateGraph` (Scraper → Analyser → Report) with supervisor routing and typed shared state across agents
 * Integrated Ollama local LLM inference (`llama3.2`) with `nomic-embed-text` embeddings — zero cloud dependency, zero API cost
 * Built a RAG pipeline with ChromaDB to index live job descriptions and perform semantic skill-gap analysis against candidate resume
-* Implemented an MCP-compliant Filesystem tool server exposing `read\_file`/`write\_file` tools via the Model Context Protocol SDK
+* Implemented an MCP-compliant Filesystem tool server exposing `read\\\_file`/`write\\\_file` tools via the Model Context Protocol SDK
 * Generated structured gap analysis reports (matched skills, missing skills, ranked match scores) as Markdown output
 
 \---
@@ -145,17 +145,17 @@ This exposes `read\_file`, `write\_file`, and `list\_files` as MCP tools — com
 ## Project Structure
 
 ```
-job\_scan\_agent/
+job\\\_scan\\\_agent/
 ├── agents/
 │   ├── state.py               # TypedDict shared state (JobScanState)
 │   ├── supervisor.py          # LangGraph StateGraph + routing logic
-│   ├── scraper\_agent.py       # Fetching live jobs from Adzuna API
-│   ├── analyser\_agent.py      # Ollama LLM + ChromaDB gap analysis
-│   └── report\_agent.py        # Markdown report writer
-├── mcp\_servers/
-│   └── filesystem\_server.py   # MCP tool server (read/write files)
+│   ├── scraper\\\_agent.py       # Fetching live jobs from Adzuna API
+│   ├── analyser\\\_agent.py      # Ollama LLM + ChromaDB gap analysis
+│   └── report\\\_agent.py        # Markdown report writer
+├── mcp\\\_servers/
+│   └── filesystem\\\_server.py   # MCP tool server (read/write files)
 ├── data/
-│   └── sample\_resume.txt      # Sample resume for testing
+│   └── sample\\\_resume.txt      # Sample resume for testing
 ├── output/                    # Generated reports go here
 ├── main.py                    # Entry point
 ├── requirements.txt
